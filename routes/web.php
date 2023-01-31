@@ -31,13 +31,7 @@ Route::group(['middleware' => [
         return Inertia::render('AddArtist');
     });
 
-    Route::get("/view/{artist}", function($artist) {
-        $artist = \App\Models\Artist::findOrFail($artist);
-
-        return Inertia::render('Artist', [
-            'artist' => $artist
-        ]);
-    })->name('view');
+    Route::get("/view/{artist}", [ArtistsController::class, 'show'])->name('view');
 
     Route::post('/artists/create', [ArtistsController::class, 'create'])
         ->name('artists.create');

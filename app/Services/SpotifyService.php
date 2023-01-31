@@ -4,6 +4,7 @@ namespace App\Services;
 
 use SpotifyWebAPI\Session;
 use SpotifyWebAPI\SpotifyWebAPI;
+use SpotifyWebAPI\SpotifyWebAPIException;
 use Illuminate\Support\Facades\Cache;
 
 class SpotifyService
@@ -32,9 +33,21 @@ class SpotifyService
     /**
      * @param $identifier
      */
-    public function findArtist($identifier)
+    public  function findArtist($identifier)
     {
-        // TODO: Implement this method
+        $artist = null;
+        try {
+            if (Cache::has($identifier)) {
+                $artist = Cache::get($identifier);
+            } else {
+                $artist = $this->api->getArtist($identifier);
+                Cache::put($identifier, $artist, now()->addHour());
+            }
+        } catch (SpotifyWebAPIException $e) {
+            echo 'Spotify API Error: ' . $e->getCode();
+        }
+
+        return $artist;
     }
 
     /**

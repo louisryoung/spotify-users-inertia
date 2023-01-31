@@ -20610,11 +20610,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _Layouts_AppLayout_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Layouts/AppLayout.vue */ "./resources/js/Layouts/AppLayout.vue");
-var __default__ = {
-  props: ['artist']
-};
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (/*#__PURE__*/Object.assign(__default__, {
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: {
+    artist: Object,
+    spotifyArtist: Object
+  },
   setup: function setup(__props, _ref) {
     var expose = _ref.expose;
     expose();
@@ -20627,7 +20628,7 @@ var __default__ = {
     });
     return __returned__;
   }
-}));
+});
 
 /***/ }),
 
@@ -24266,75 +24267,101 @@ var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 var _hoisted_10 = {
   "class": "mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2"
 };
-
-var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dt", {
-  "class": "text-sm font-medium text-gray-500"
-}, "Avatar"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dd", {
-  "class": "mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
-  "class": "inline-block h-12 w-12 rounded-full overflow-hidden bg-gray-100"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
-  "class": "h-full w-full text-gray-300",
-  fill: "currentColor",
-  viewBox: "0 0 24 24"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("path", {
-  d: "M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z"
-})])])])], -1
-/* HOISTED */
-);
-
-var _hoisted_12 = {
+var _hoisted_11 = {
   "class": "py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
 };
 
-var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dt", {
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dt", {
+  "class": "text-sm font-medium text-gray-500"
+}, "Avatar", -1
+/* HOISTED */
+);
+
+var _hoisted_13 = {
+  "class": "mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2"
+};
+var _hoisted_14 = {
+  "class": "inline-block h-12 w-12 rounded-full overflow-hidden bg-gray-100"
+};
+var _hoisted_15 = ["src"];
+var _hoisted_16 = {
+  key: 1,
+  "class": "h-full w-full text-gray-300",
+  fill: "currentColor",
+  viewBox: "0 0 24 24"
+};
+
+var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("path", {
+  d: "M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_18 = [_hoisted_17];
+var _hoisted_19 = {
+  key: 0,
+  "class": "py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
+};
+
+var _hoisted_20 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dt", {
+  "class": "text-sm font-medium text-gray-500"
+}, "Followers", -1
+/* HOISTED */
+);
+
+var _hoisted_21 = {
+  "class": "mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2"
+};
+var _hoisted_22 = {
+  "class": "py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
+};
+
+var _hoisted_23 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dt", {
   "class": "text-sm font-medium text-gray-500"
 }, "Spotify ID", -1
 /* HOISTED */
 );
 
-var _hoisted_14 = {
+var _hoisted_24 = {
   "class": "mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2"
 };
-var _hoisted_15 = {
+var _hoisted_25 = {
   "class": "py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
 };
 
-var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dt", {
+var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dt", {
   "class": "text-sm font-medium text-gray-500"
 }, "Deezer ID", -1
 /* HOISTED */
 );
 
-var _hoisted_17 = {
+var _hoisted_27 = {
   "class": "mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2"
 };
-var _hoisted_18 = {
+var _hoisted_28 = {
   "class": "py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
 };
 
-var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dt", {
+var _hoisted_29 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dt", {
   "class": "text-sm font-medium text-gray-500"
 }, "Apple ID", -1
 /* HOISTED */
 );
 
-var _hoisted_20 = {
+var _hoisted_30 = {
   "class": "mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2"
 };
-var _hoisted_21 = {
+var _hoisted_31 = {
   "class": "py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
 };
 
-var _hoisted_22 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dt", {
+var _hoisted_32 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dt", {
   "class": "text-sm font-medium text-gray-500"
 }, "Bio", -1
 /* HOISTED */
 );
 
-var _hoisted_23 = {
+var _hoisted_33 = {
   "class": "mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
@@ -24347,13 +24374,21 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [_hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dl", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [_hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dd", _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.artist.name), 1
       /* TEXT */
-      )]), _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [_hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dd", _hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.artist.spotify_id), 1
+      )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [_hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dd", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_14, [$props.spotifyArtist ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("img", {
+        key: 0,
+        src: $props.spotifyArtist.images[0].url,
+        alt: "Spotify avatar"
+      }, null, 8
+      /* PROPS */
+      , _hoisted_15)) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("svg", _hoisted_16, _hoisted_18))])])]), $props.spotifyArtist ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_19, [_hoisted_20, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dd", _hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.spotifyArtist.followers.total), 1
       /* TEXT */
-      )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [_hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dd", _hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.artist.deezer_id), 1
+      )])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [_hoisted_23, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dd", _hoisted_24, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.artist.spotify_id), 1
       /* TEXT */
-      )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [_hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dd", _hoisted_20, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.artist.apple_id), 1
+      )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [_hoisted_26, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dd", _hoisted_27, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.artist.deezer_id), 1
       /* TEXT */
-      )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [_hoisted_22, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dd", _hoisted_23, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.artist.bio), 1
+      )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_28, [_hoisted_29, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dd", _hoisted_30, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.artist.apple_id), 1
+      /* TEXT */
+      )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_31, [_hoisted_32, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("dd", _hoisted_33, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.artist.bio), 1
       /* TEXT */
       )])])])])])])];
     }),
