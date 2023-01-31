@@ -45,8 +45,11 @@ class ArtistsController extends Controller
 
     public function show($artist)
     {
+        $spotifyArtist = null;
         $artist = Artist::findOrFail($artist);
-        $spotifyArtist = $this->spotifyService->findArtist($artist->spotify_id);
+        if ($artist->spotify_id) {
+            $spotifyArtist = $this->spotifyService->findArtist($artist->spotify_id);
+        }
 
         return Inertia::render('Artist', compact('artist', 'spotifyArtist'));
     }
