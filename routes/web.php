@@ -29,7 +29,7 @@ Route::group(['middleware' => [
 
     Route::get("/dashboard/add", function() {
         return Inertia::render('AddArtist');
-    });
+    })->name('artists.add');
 
     Route::get("/view/{artist}", [ArtistsController::class, 'show'])->name('view');
 
