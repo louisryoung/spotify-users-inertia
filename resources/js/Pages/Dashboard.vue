@@ -1,6 +1,9 @@
 <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue';
-import Welcome from '@/Jetstream/Welcome.vue';
+
+defineProps({
+  artists: Array,
+});
 </script>
 
 <template>
@@ -66,25 +69,3 @@ import Welcome from '@/Jetstream/Welcome.vue';
     </div>
   </AppLayout>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      artists: [],
-    };
-  },
-
-  methods: {
-    fetchArtists() {
-      return axios.get('/api/artists').then(({ data }) => {
-        this.artists = data;
-      });
-    },
-  },
-
-  mounted() {
-    this.fetchArtists();
-  },
-};
-</script>
