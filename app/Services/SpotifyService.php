@@ -44,7 +44,7 @@ class SpotifyService
                 Cache::put($identifier, $artist, now()->addHour());
             }
         } catch (SpotifyWebAPIException $e) {
-            echo 'Spotify API Error: ' . $e->getCode();
+            echo 'Spotify API Error ' . $e->getCode() . ': ' . $e->getMessage();
         }
 
         return $artist;

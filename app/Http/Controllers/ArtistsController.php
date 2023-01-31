@@ -2,19 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Artist;
-use App\Services\SpotifyService;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
+use App\Models\Artist;
+use App\Services\SpotifyService;
 
 class ArtistsController extends Controller
 {
     /**
      * @return Artist[]|Collection
      */
+
     private $spotifyService;
+
     public function __construct()
     {
         $this->spotifyService = new SpotifyService();
@@ -24,7 +26,7 @@ class ArtistsController extends Controller
     {
         $artists = Artist::all();
         
-        return Inertia::render('Dashboard', compact('artist'));
+        return Inertia::render('Dashboard', compact('artists'));
     }
 
     public function create(Request $request)
