@@ -3,6 +3,7 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\ArtistsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,9 +25,7 @@ Route::group(['middleware' => [
     config('jetstream.auth_session'),
     'verified',
 ]], function() {
-    Route::get('/dashboard', function () {
-        return Inertia::render('Dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard', [ArtistsController::class, 'get'])->name('dashboard');
 
     Route::get("/dashboard/add", function() {
         return Inertia::render('AddArtist');
@@ -39,4 +38,7 @@ Route::group(['middleware' => [
             'artist' => $artist
         ]);
     })->name('view');
+
+    Route::post('/artists/create', [ArtistsController::class, 'create'])
+        ->name('artists.create');
 });
